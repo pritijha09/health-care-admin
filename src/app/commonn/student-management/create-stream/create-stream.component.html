@@ -1,0 +1,195 @@
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <button class="pull-right" data-toggle="modal" data-target="#myModal" mat-raised-button
+                        color="primary">Add Class Stream</button>
+                </div>
+                <!--/.box-header-->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="minibox box-default">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Stream List</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="table-responsive" style="overflow-y:auto;">
+                                        <table class="table table-bordred table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th width="70px">S.N.</th>
+                                                    <th width="30px">Stream Title</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Science</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Art</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>PCM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>PCB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Commerce</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--/table-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="minibox box-default">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Class Stream List</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="table-responsive" style="overflow-y:auto;">
+                                        <table class="table table-bordred table-striped ">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.N.</th>
+                                                    <th>Class Name</th>
+                                                    <th>Stream</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Class IX</td>
+                                                    <td>Art</td>
+                                                    <td><button mat-icon-button color="primary"
+                                                            aria-label="Example icon button with a create icon"
+                                                            matTooltip="Edit"
+                                                            matTooltipClass="example-tooltip"  
+                                                            matTooltipPosition="left">
+                                                            <mat-icon>create</mat-icon>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Class X</td>
+                                                    <td>
+                                                <tr>Science</tr>
+                                                <tr>Art</tr>
+                                                </td>
+                                                <td><button mat-icon-button color="primary"
+                                                    aria-label="Example icon button with a create icon"
+                                                    matTooltip="Edit"
+                                                    matTooltipClass="example-tooltip"  
+                                                    matTooltipPosition="left">
+                                                    <mat-icon>create</mat-icon>
+                                                </button>
+                                            </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Class XI</td>
+                                                    <td>
+                                                <tr>Commerce</tr>
+                                                <tr>Art</tr>
+                                                <tr>PCB</tr>
+                                                <tr>PCM</tr>
+                                                </td>
+                                                <td><button mat-icon-button color="primary"
+                                                    aria-label="Example icon button with a create icon"
+                                                    matTooltip="Edit"
+                                                    matTooltipClass="example-tooltip"  
+                                                    matTooltipPosition="left">
+                                                    <mat-icon>create</mat-icon>
+                                                </button>
+                                            </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Class XII</td>
+                                                    <td>
+                                                <tr>Commerce</tr>
+                                                <tr>Art</tr>
+                                                <tr>PCB</tr>
+                                                <tr>PCM</tr>
+                                                </td>
+                                                <td><button mat-icon-button color="primary"
+                                                    aria-label="Example icon button with a create icon"
+                                                    matTooltip="Edit"
+                                                    matTooltipClass="example-tooltip"  
+                                                    matTooltipPosition="left">
+                                                    <mat-icon>create</mat-icon>
+                                                </button>
+                                            </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--/table-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                            </div>
+                            <div class="modal-body">
+                                <form [formGroup]="assignsectionFormGroup">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <mat-form-field>
+                                                <mat-label>Class</mat-label>
+                                                <mat-select formControlName="class_name" required>
+                                                    <mat-option>None</mat-option>
+                                                    <mat-option *ngFor="let class of classes" [value]="class">{{class}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul style="list-style-type: none;">
+                                            <li><mat-checkbox color="primary" class="example-margin">
+                                            </mat-checkbox> Art</li>
+                                            <li><mat-checkbox color="primary" class="example-margin">
+                                            </mat-checkbox> Science</li>
+                                            <li><mat-checkbox color="primary" class="example-margin">
+                                            </mat-checkbox> PCB</li>
+                                            <li><mat-checkbox color="primary" class="example-margin">
+                                            </mat-checkbox> PCM</li>
+                                            <li><mat-checkbox color="primary" class="example-margin">
+                                            </mat-checkbox> Commerce</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="pull-right" mat-raised-button color="primary">Submit</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>

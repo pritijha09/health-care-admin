@@ -1,0 +1,472 @@
+<section class="content">
+    <!-- <div class="row">
+      <a class="btn btn-app btn-info pull-right" style="margin-right: 12px;" routerLink="/admin/add-member">
+        <i class="fa fa-plus"></i> Add Member
+      </a> -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                </div>
+                <div class="box-body">
+                    <mat-horizontal-stepper #stepper>
+                        <!--Step-1-->
+                        <mat-step [stepControl]="employeeinfoFormGroup">
+                            <form [formGroup]="employeeinfoFormGroup">
+                                <ng-template matStepLabel>Employee Information</ng-template>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Employee Name</mat-label>
+                                            <input matInput placeholder="employee name" formControlName="employee_name"
+                                                required>
+                                            <mat-error *ngIf="employee_name.errors">
+                                                <mat-error *ngIf="employee_name.errors.required">
+                                                    Employee name is required
+                                                </mat-error>
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field>
+                                            <mat-label>Gender</mat-label>
+                                            <mat-select formControlName="employee_gender" required>
+                                                <mat-option>Male</mat-option>
+                                                <mat-option>Female</mat-option>
+                                            </mat-select>
+                                            <mat-error *ngIf="employee_gender.errors">
+                                                <mat-error *ngIf="employee_gender.errors.required">
+                                                     Gender is required
+                                                </mat-error>
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field>
+                                            <mat-label> Date Of Birth</mat-label>
+                                            <input matInput [matDatepicker]="picker" formControlName="dob" required>
+                                            <mat-datepicker-toggle matSuffix [for]="picker">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                            <mat-error *ngIf="dob.errors">
+                                                <mat-error *ngIf="dob.errors.required">
+                                                    Dob is required
+                                                </mat-error>
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Father/Husband Name</mat-label>
+                                            <input matInput placeholder="employee father/husband name"
+                                                formControlName="employee_fathername" required>
+                                                <mat-error *ngIf="employee_fathername.errors">
+                                                    <mat-error *ngIf="employee_fathername.errors.required">
+                                                        Father name is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Email Id</mat-label>
+                                            <input matInput placeholder="Employee email"
+                                                formControlName="employee_email" required>
+                                                <mat-error *ngIf="employee_email.errors">
+                                                    <mat-error *ngIf="employee_email.errors.required">
+                                                        Email is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Contact/SMS No.</mat-label>
+                                            <input matInput type="number" placeholder="contact no."
+                                                formControlName="employee_mobile" required>
+                                                <mat-error *ngIf="employee_mobile.errors">
+                                                    <mat-error *ngIf="employee_mobile.errors.required">
+                                                        Mobile no. is required
+                                                    </mat-error>
+                                                    <mat-error *ngIf="employee_mobile.errors.pattern">
+                                                          Please Enter 10 digit Mobile Number
+                                                        </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Empployee Code</mat-label>
+                                            <input matInput type="number" placeholder="employee code"
+                                                formControlName="employee_code" required>
+                                                <mat-error *ngIf="employee_code.errors">
+                                                    <mat-error *ngIf="employee_code.errors.required">
+                                                        Employee code is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field>
+                                            <mat-label>Employee Qualification
+                                            </mat-label>
+                                            <mat-select formControlName="employee_qualification" required>
+                                                <mat-option>8th</mat-option>
+                                                <mat-option>10th</mat-option>
+                                                <mat-option>Graduation</mat-option>
+                                                <mat-option>Post graduation</mat-option>
+                                            </mat-select>
+                                            <mat-error *ngIf="employee_qualification.errors">
+                                                <mat-error *ngIf="employee_qualification.errors.required">
+                                                    Employee qualification is required
+                                                </mat-error>
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field>
+                                            <mat-label> Joining Date</mat-label>
+                                            <input matInput [matDatepicker]="picker2" formControlName="joining_date"
+                                                required>
+                                            <mat-datepicker-toggle matSuffix [for]="picker2">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #picker2></mat-datepicker>
+                                            <mat-error *ngIf="joining_date.errors">
+                                                <mat-error *ngIf="joining_date.errors.required">
+                                                    Employee joining is required
+                                                </mat-error>
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Employee RFID</mat-label>
+                                            <input matInput type="text" placeholder="employee RfId"
+                                                formControlName="employee_rfId">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field>
+                                            <mat-label>Employee Designation</mat-label>
+                                            <mat-select formControlName="employee_designation" required>
+                                                <mat-option>Director</mat-option>
+                                                <mat-option>Principal</mat-option>
+                                                <mat-option>Teacher</mat-option>
+                                                <mat-option>Accountant</mat-option>
+                                                <mat-option>Peon</mat-option>
+                                                <mat-option>Others</mat-option>
+                                            </mat-select>
+                                            <mat-error *ngIf="employee_designation.errors">
+                                                <mat-error *ngIf="employee_designation.errors.required">
+                                                    Employee designation is required
+                                                </mat-error>
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Teaching Subject Prefered</mat-label>
+                                            <input matInput placeholder="subject prefered"
+                                                formControlName="employee_preferedSubject" required>
+                                                <mat-error *ngIf="employee_preferedSubject.errors">
+                                                    <mat-error *ngIf="employee_preferedSubject.errors.required">
+                                                        Prefer subject is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <!-- -------file upload--------------------->
+                                <br>
+                                <hr>
+                                <p>Documents Upload <span class="fa fa-upload text-red">
+                                        (*jpeg, png, pdf)</span></p>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-toolbar>
+                                                <input matInput readonly name="name" />
+                                            </mat-toolbar>
+                                            <mat-label> Employee Photo</mat-label>
+                                            <input type="file" #fileInput id="uploadFile" name="uploadFile"
+                                                multiple="multiple" accept="image/*" />
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-toolbar>
+                                                <input matInput readonly name="name" />
+                                            </mat-toolbar>
+                                            <mat-label> Experience Letter</mat-label>
+                                            <input type="file" #fileInput id="uploadFile" name="uploadFile"
+                                                multiple="multiple" accept="docs/*pdf/*" />
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-toolbar>
+                                                <input matInput readonly name="name" />
+                                            </mat-toolbar>
+                                            <mat-label> Qualification Proof</mat-label>
+                                            <input type="file" #fileInput id="uploadFile" name="uploadFile"
+                                                multiple="multiple" accept="image/*pdf/*" />
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-toolbar>
+                                                <input matInput readonly name="name" />
+                                            </mat-toolbar>
+                                            <mat-label> Id Proof</mat-label>
+                                            <input type="file" #fileInput id="uploadFile" name="uploadFile"
+                                                multiple="multiple" accept="image/*pdf/*" />
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-toolbar>
+                                                <input matInput readonly name="name" />
+                                            </mat-toolbar>
+                                            <mat-label> Other Documents 1</mat-label>
+                                            <input type="file" #fileInput id="uploadFile" name="uploadFile"
+                                                multiple="multiple" accept="image/*pdf/*" />
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-toolbar>
+                                                <input matInput readonly name="name" />
+                                            </mat-toolbar>
+                                            <mat-label> Other Documents 2</mat-label>
+                                            <input type="file" #fileInput id="uploadFile" name="uploadFile"
+                                                multiple="multiple" accept="image/*pdf/*" />
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="pull-right">
+                                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                                </div>
+                            </form>
+                        </mat-step>
+                        <!--step-2---->
+                        <mat-step [stepControl]="salaryDetailsFormGroup">
+                            <br>
+                            <form [formGroup]="salaryDetailsFormGroup">
+                                <ng-template matStepLabel>Salary Details</ng-template>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Pan No.</mat-label>
+                                            <input matInput type="number" placeholder="pan no."
+                                                formControlName="employee_pan" required>
+                                                <mat-error *ngIf="employee_pan.errors">
+                                                    <mat-error *ngIf="employee_pan.errors.required">
+                                                        Pan is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Aadhar No.</mat-label>
+                                            <input matInput type="number" placeholder="aadhar no."
+                                                formControlName="employee_aadhar" required>
+                                                <mat-error *ngIf="employee_aadhar.errors">
+                                                    <mat-error *ngIf="employee_aadhar.errors.required">
+                                                        Aadhar is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Bank Name</mat-label>
+                                            <input matInput type="text" placeholder="bank name"
+                                                formControlName="employeeBank_name" required>
+                                                <mat-error *ngIf="employeeBank_name.errors">
+                                                    <mat-error *ngIf="employeeBank_name.errors.required">
+                                                        Bank name is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Account No.</mat-label>
+                                            <input matInput type="number" placeholder="account no."
+                                                formControlName="employeeAccount_no" required>
+                                                <mat-error *ngIf="employeeAccount_no.errors">
+                                                    <mat-error *ngIf="employeeAccount_no.errors.required">
+                                                        Account no. is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Ifsc Code</mat-label>
+                                            <input matInput type="text" placeholder="Ifsc code"
+                                                formControlName="employeeIfsc_code" required>
+                                                <mat-error *ngIf="employeeIfsc_code.errors">
+                                                    <mat-error *ngIf="employeeIfsc_code.errors.required">
+                                                        Ifsc code is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Monthly Salary</mat-label>
+                                            <input matInput type="number" placeholder="monthly salary"
+                                                formControlName="monthly_salary" required>
+                                                <mat-error *ngIf="monthly_salary.errors">
+                                                    <mat-error *ngIf="monthly_salary.errors.required">
+                                                        Monthly salary is required
+                                                    </mat-error>
+                                                </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Other Wages</mat-label>
+                                            <input matInput type="number" placeholder="other wages"
+                                                formControlName="other_wages">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> PF No.</mat-label>
+                                            <input matInput type="number" placeholder="pf no." formControlName="pf_no">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> PF Amount(monthly)</mat-label>
+                                            <input matInput type="number" placeholder="pf amount"
+                                                formControlName="pf_amount">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> TDS Amount(monthly)</mat-label>
+                                            <input matInput type="number" placeholder="tds amount"
+                                                formControlName="tds_amount">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> ESIS Amount(monthly)</mat-label>
+                                            <input matInput type="number" placeholder="Esis amount"
+                                                formControlName="esis_amount">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Tax Amount(monthly)</mat-label>
+                                            <input matInput type="number" placeholder="tax amount"
+                                                formControlName="tax_amount">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> HRA Amount(monthly)</mat-label>
+                                            <input matInput type="number" placeholder="hra amount"
+                                                formControlName="hra_amount">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> DA Amount(monthly)</mat-label>
+                                            <input matInput type="number" placeholder="da amount"
+                                                formControlName="da_amount">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Allowances (monthly)</mat-label>
+                                            <input matInput type="number" placeholder="allowances"
+                                                formControlName="allowances">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Remark</mat-label>
+                                            <input matInput type="text" placeholder="remark" formControlName="remaek">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="pull-right">
+                                    <button mat-raised-button matStepperPrevious
+                                        style="margin-right: 10px;">Back</button>
+                                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                                </div>
+                            </form>
+                        </mat-step>
+                        <!--step--3-->
+                        <mat-step [stepControl]="leaveDetailsFormGroup">
+                            <br>
+                            <form [formGroup]="leaveDetailsFormGroup">
+                                <ng-template matStepLabel>Leave Details</ng-template>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Casual Leave</mat-label>
+                                            <input matInput type="number" placeholder="casual leave"
+                                                formControlName="casual_leave">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Pay/Earn Leave</mat-label>
+                                            <input matInput type="number" placeholder="pay/earn leave"
+                                                formControlName="earn_leave">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Sick Leave</mat-label>
+                                            <input matInput type="number" placeholder="sick leave"
+                                                formControlName="sick_leave">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label> Other Leave</mat-label>
+                                            <input matInput type="number" placeholder="other leave"
+                                                formControlName="other_leave">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="pull-right">
+                                    <button mat-raised-button matStepperPrevious
+                                        style="margin-right: 10px;">Back</button>
+                                    <button mat-raised-button matStepperNext color="primary">Submit</button>
+                                </div>
+                            </form>
+                        </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>

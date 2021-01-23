@@ -1,0 +1,212 @@
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <!-- <button class="pull-right" data-toggle="modal" data-target="#myModal" mat-raised-button
+                        color="primary">Add Class Stream</button> -->
+                </div>
+                <!--/.box-header-->
+                <div class="box-body">
+                    <div class="row">
+                        <form>
+                            <div class="col-md-4">
+                                <label>Search</label>
+                                <div class="has-feedback">
+                                    <input type="text" class="form-control input-md"
+                                        placeholder="e.g, name, registration no.">
+                                </div> 
+                            </div>
+                            <div class="col-md-2">
+                                <button mat-raised-button color="primary" 
+                                style="margin-top:23px; margin-bottom:10px">Submit</button>
+                            </div>
+                        </form>
+                        <div class="col-md-4">
+                            <label>Upload Students Data <span class="text-red"> (.csv*, .xlsx*)</span></label>
+                            <div class="has-feedback">
+                                <input type="file" class="form-control input-md">
+                            </div>
+                            </div>
+                        <div class="col-md-2">
+                            <button mat-raised-button color="primary" style="margin-top:23px">Uplaod</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                <div class="col-md-12 pull-right">
+                    <div class="btn-group pull-right margin">
+                        <button type="button" class="btn btn-default">copy</button>
+                        <button type="button" class="btn btn-default">csv</button>
+                        <button type="button" class="btn btn-default">print</button>
+                      </div>
+                </div>
+                </div>
+                <!--/.box-header-->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table id="mytable" class="table table-bordred table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S.N</th>
+                                    <th>Student Name</th>
+                                    <th>Class</th>
+                                    <th>Section</th>
+                                    <th>Reg. No.</th>
+                                    <th>Father Name</th>
+                                    <th>Mobile No.</th>
+                                    <th>Gender</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Himanshu</td>
+                                    <td>UKG</td>
+                                    <td>A</td>
+                                    <td>1220</td>
+                                    <td>Rakesh Singh</td>
+                                    <td>0987652347</td>
+                                    <td>Male</td>
+                                    <td><button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="Edit"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>create</mat-icon>
+                                    </button>
+                                    <button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="View"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>visibility</mat-icon>
+                                    </button>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Himanshu</td>
+                                    <td>UKG</td>
+                                    <td>A</td>
+                                    <td>1220</td>
+                                    <td>Rakesh Singh</td>
+                                    <td>0987652347</td>
+                                    <td>Male</td>
+                                    <td><button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="Edit"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>create</mat-icon>
+                                    </button>
+                                    <button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="View"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>visibility</mat-icon>
+                                    </button>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Himanshu</td>
+                                    <td>UKG</td>
+                                    <td>A</td>
+                                    <td>1220</td>
+                                    <td>Rakesh Singh</td>
+                                    <td>0987652347</td>
+                                    <td>Male</td>
+                                    <td><button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="Edit"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>create</mat-icon>
+                                    </button>
+                                    <button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="View"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>visibility</mat-icon>
+                                    </button>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Himanshu</td>
+                                    <td>UKG</td>
+                                    <td>A</td>
+                                    <td>1220</td>
+                                    <td>Rakesh Singh</td>
+                                    <td>0987652347</td>
+                                    <td>Male</td>
+                                    <td><button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="Edit"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>create</mat-icon>
+                                    </button>
+                                    <button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="View"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>visibility</mat-icon>
+                                    </button>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Himanshu</td>
+                                    <td>UKG</td>
+                                    <td>A</td>
+                                    <td>1220</td>
+                                    <td>Rakesh Singh</td>
+                                    <td>0987652347</td>
+                                    <td>Male</td>
+                                    <td><button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="Edit"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>create</mat-icon>
+                                    </button>
+                                    <button mat-icon-button color="primary"
+                                        aria-label=""
+                                        matTooltip="View"
+                                        matTooltipClass="example-tooltip"  
+                                        matTooltipPosition="left">
+                                        <mat-icon>visibility</mat-icon>
+                                    </button>
+                                </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="clearfix"></div>
+                        <ul class="pagination pull-right">
+                            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/table-->
+            </div> 
+
+        </div>
+    </div>
+    <!-- /.row -->
+</section>

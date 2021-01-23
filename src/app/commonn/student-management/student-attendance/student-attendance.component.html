@@ -1,0 +1,368 @@
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <!-- <button class="pull-right" data-toggle="modal" data-target="#myModal" mat-raised-button
+                        color="primary">Add Class Stream</button> -->
+                </div>
+                <!--/.box-header-->
+                <div class="box-body">
+                    <div class="row">
+                        <form>
+                            <div class="col-md-3">
+                                <label>Month</label>
+                                <select class="form-control">
+                                    <option>--Select--</option>
+                                    <option>January</option>
+                                    <option>Febraury</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Class</label>
+                                <select class="form-control">
+                                    <option>--Select--</option>
+                                    <option>Class 1st</option>
+                                    <option>Class 2d</option>
+                                    <option>Class 3rd</option>
+                                    <option>Class 4rt</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Section</label>
+                                <select class="form-control">
+                                    <option>--Select--</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="col-md-3">
+                            <button mat-raised-button color="primary" 
+                            style="margin-top:23px; margin-bottom: 10px">Go</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <div class="col-md-3">
+                        <h3 class="box-title pull-left">Class 5th</h3>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <h2 class="box-title">JANUARY 2021</h2>
+                    </div>
+                    <div class="col-md-3 pull-right">
+                        <a class="btn btn pull-right" style="margin-right: 12px;" routerLink="">
+                            <i class="fa fa-download"></i> Download Attendance
+                        </a>
+                    </div>
+
+                </div>
+                <!--/.box-header-->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table id="mytable" class="table table-bordred table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S.N</th>
+                                    <th>Student Name</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th class="text-red">3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th class="text-red">10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th class="text-red">17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th class="text-red">24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                    <th class="text-red">31</th>
+                                    <th class="text-primary">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>Surendra</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">A</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-info" data-toggle="tooltip" 
+                                    data-placement="bottom" title="I am on seek leave">L</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-warning"data-toggle="tooltip" 
+                                    data-placement="bottom" title="Half day for urgent work">H</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">
+                                        <div class="btn-group-vertical">
+                                            <button type="button" class="btn btn">
+                                                <li class="text-green list-unstyled">P= 25  </li>
+                                                <li class="text-red list-unstyled">A= 02</li>
+                                            </button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Surendra</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">A</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-info" data-toggle="tooltip" 
+                                    data-placement="bottom" title="I am on seek leave">L</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-warning"data-toggle="tooltip" 
+                                    data-placement="bottom" title="Half day for urgent work">H</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">
+                                        <div class="btn-group-vertical">
+                                            <button type="button" class="btn btn">
+                                                <li class="text-green list-unstyled">P= 25  </li>
+                                                <li class="text-red list-unstyled">A= 02</li>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Surendra</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">A</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-info" data-toggle="tooltip" 
+                                    data-placement="bottom" title="I am on seek leave">L</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-warning"data-toggle="tooltip" 
+                                    data-placement="bottom" title="Half day for urgent work">H</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">
+                                        <div class="btn-group-vertical">
+                                            <button type="button" class="btn btn">
+                                                <li class="text-green list-unstyled">P= 25  </li>
+                                                <li class="text-red list-unstyled">A= 02</li>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Surendra</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">A</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-info" data-toggle="tooltip" 
+                                    data-placement="bottom" title="I am on seek leave">L</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-warning"data-toggle="tooltip" 
+                                    data-placement="bottom" title="Half day for urgent work">H</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">
+                                        <div class="btn-group-vertical">
+                                            <button type="button" class="btn btn">
+                                                <li class="text-green list-unstyled">P= 25  </li>
+                                                <li class="text-red list-unstyled">A= 02</li>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Surendra</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">A</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-info" data-toggle="tooltip" 
+                                    data-placement="bottom" title="I am on seek leave">L</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="badge badge-warning"data-toggle="tooltip" 
+                                    data-placement="bottom" title="Half day for urgent work">H</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-red">sun</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">P</td>
+                                    <td class="text-green">
+                                        <div class="btn-group-vertical">
+                                            <button type="button" class="btn btn">
+                                                <li class="text-green list-unstyled">P= 25  </li>
+                                                <li class="text-red list-unstyled">A= 02</li>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="clearfix"></div>
+                        <ul class="pagination pull-right">
+                            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/table-->
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- /.row -->
+</section>

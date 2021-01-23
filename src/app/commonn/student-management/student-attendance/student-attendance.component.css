@@ -1,0 +1,9 @@
+.badge-warning{
+         background-color:#f39c12;
+     }
+     .badge-info{
+        background-color:#00c0ef;
+    }
+    .btn-group-vertical>.btn >li{
+    cursor: auto;
+    }

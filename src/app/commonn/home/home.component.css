@@ -1,0 +1,16 @@
+.small-box {
+   
+    box-shadow: 10px 10px 5px #8080806e;     
+}
+
+    .small-box .icon {
+        top: 5px; 
+        
+    }
+    .small-box > .inner {
+        padding: 12px;
+    }
+    .icon{
+        font-size: 80px
+
+    }
