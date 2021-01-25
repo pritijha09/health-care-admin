@@ -15,10 +15,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCheckboxModule, } from '@angular/material/checkbox';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatChipInput, MatChipsModule} from '@angular/material/chips';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -51,6 +52,9 @@ import {MatChipInput, MatChipsModule} from '@angular/material/chips';
     MatExpansionModule,
     MatTabsModule,
     MatChipsModule,
+    MatRadioModule,
+    MatCardModule,
+    
     
    
     
@@ -84,6 +88,9 @@ import {MatChipInput, MatChipsModule} from '@angular/material/chips';
     MatExpansionModule,
     MatTabsModule,
     MatChipsModule,
+    MatRadioModule,
+    MatCardModule
+    
     
    
     

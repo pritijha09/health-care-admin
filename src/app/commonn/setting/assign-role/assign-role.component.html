@@ -1,57 +1,56 @@
 <section class="content">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="box box-primary">
-          <div class="box-header">
-          </div>
-          <!--/.box-header-->
-          <div class="box-body">
-            <form>
-              <div class="row callout callout-default minibox">
-                <div class="col-md-4">
-                  <mat-form-field appearance="">
-                    <mat-label>Staff List</mat-label>
-                    <mat-select multiple>
-                      <mat-option>Director</mat-option>
-                      <mat-option>Principal</mat-option>
-                      <mat-option>Teacher</mat-option>
-                      <mat-option>Accountant</mat-option>
-                      <mat-option>Computer operator</mat-option>
-                      <mat-option>Others</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-                </div>
-                <div class="col-md-4"> 
-                </div>
-                <div class="col-md-4">
-                  <!-- <button type="submit" mat-raised-button color="primary">Save</button> -->
-                </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-primary">
+        <div class="box-header">
+        </div>
+        <!--/.box-header-->
+        <div class="box-body">
+          <form>
+            <div class="row callout callout-default minibox">
+              <div class="col-md-4">
+                <mat-form-field appearance="">
+                  <mat-label>Staff List</mat-label>
+                  <mat-select multiple>
+                    <mat-option>Director</mat-option>
+                    <mat-option>Principal</mat-option>
+                    <mat-option>Teacher</mat-option>
+                    <mat-option>Accountant</mat-option>
+                    <mat-option>Computer operator</mat-option>
+                    <mat-option>Others</mat-option>
+                  </mat-select>
+                </mat-form-field>
               </div>
-            </form>
-              <div class="callout callout-default minibox">
-                        <h4>Permissions</h4>
-                        <section class="example-section">
-
-                            <mat-checkbox class="example-margin" [checked]="allComplete" [color]="task.color"
-                                [indeterminate]="someComplete()" (change)="setAll($event.checked)">
-                                {{task.name}}
-                            </mat-checkbox>
-
-                        </section>
-                        <section class="example-section">
-                            <ul>
-                                <li style="display: inline-block" *ngFor="let subtask of task.subtasks">
-                                    <mat-checkbox class="example-margin" [(ngModel)]="subtask.completed"
-                                        [color]="subtask.color" (ngModelChange)="updateAllComplete()">
-                                        {{subtask.name}}
-                                    </mat-checkbox>
-                                </li>
-                            </ul>
-                        </section>
-                    </div>
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+                <!-- <button type="submit" mat-raised-button color="primary">Save</button> -->
+              </div>
+            </div>
+          </form>
+          <div class="callout callout-default minibox">
+            <h4>Permissions</h4>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [checked]="allComplete" [color]="task.color"
+                [indeterminate]="someComplete()" (change)="setAll($event.checked)">
+                {{task.name}}
+              </mat-checkbox>
+            </section>
+            <section class="example-section">
+              <ul>
+                <li style="display: inline-block" *ngFor="let subtask of task.subtasks">
+                  <mat-checkbox class="example-margin" [(ngModel)]="subtask.completed" [color]="subtask.color"
+                    (ngModelChange)="updateAllComplete()">
+                    {{subtask.name}}
+                  </mat-checkbox>
+                </li>
+              </ul>
+            </section>
           </div>
+          <button type="submit" class="pull-right" mat-raised-button color="primary">Submit</button>
         </div>
       </div>
     </div>
-    <!-- /.row -->
-  </section>
+  </div>
+  <!-- /.row -->
+</section>

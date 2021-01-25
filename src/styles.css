@@ -301,7 +301,10 @@ hr {
 .form-control {
   border-radius: 4px;
 }
-.mat-checkbox-layout .mat-checkbox-label {
-  line-height: 50px!important;
-    width: 124px!important;
+.mat-checkbox-label {
+  line-height: 40px !important;
+  width: auto !important;
+}
+.mat-checkbox {
+  margin-left: 35px;  
 }

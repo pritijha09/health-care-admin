@@ -1,3 +1,4 @@
+import { RenewSoftwareComponent } from './../commonn/setting/renew-software/renew-software.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
@@ -20,6 +21,7 @@ import { CreateFeeComponent } from '../commonn/account-management/create-fee/cre
 import { AddEmployeeComponent } from '../commonn/employee-management/add-employee/add-employee.component';
 import { CreateClassComponent } from '../commonn/setting/create-class/create-class.component';
 import { AssignRoleComponent } from '../commonn/setting/assign-role/assign-role.component';
+import { YearPromotionComponent } from '../commonn/setting/year-promotion/year-promotion.component';
 
 
 const routes: Routes = [
@@ -211,6 +213,26 @@ const routes: Routes = [
         // roles: [Role.Admin],
         title: 'Assign Role',
         breadcrumb: 'Assign Role'
+      }
+    },
+    {
+      path: 'year-promotion',
+      component: YearPromotionComponent,
+      // canActivate: [AuthGuard],
+      data: {
+        // roles: [Role.Admin],
+        title: 'Year Promotion',
+        breadcrumb: 'Year Promotion'
+      }
+    },
+    {
+      path: 'renew-software',
+      component: RenewSoftwareComponent,
+      // canActivate: [AuthGuard],
+      data: {
+        // roles: [Role.Admin],
+        title: 'Renew Software',
+        breadcrumb: 'Renew Software'
       }
     },
 

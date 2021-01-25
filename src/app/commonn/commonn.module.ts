@@ -27,6 +27,10 @@ import { CreateFeeComponent } from './account-management/create-fee/create-fee.c
 import { AddEmployeeComponent } from './employee-management/add-employee/add-employee.component';
 import { CreateClassComponent } from './setting/create-class/create-class.component';
 import { AssignRoleComponent } from './setting/assign-role/assign-role.component';
+import { YearPromotionComponent } from './setting/year-promotion/year-promotion.component';
+import { RenewSoftwareComponent } from './setting/renew-software/renew-software.component';
+
+
 
 
 
@@ -50,6 +54,10 @@ import { AssignRoleComponent } from './setting/assign-role/assign-role.component
     AddEmployeeComponent,
     CreateClassComponent,
     AssignRoleComponent,
+    YearPromotionComponent,
+    RenewSoftwareComponent,
+    
+    
     
     
   ],
