@@ -178,9 +178,8 @@ th {
 .box-header {
   color: #444;
   display: block;
-  padding: 10px;
+  padding: 30px 16px 3px 16px;
   position: relative;
-  
 }
 
 #filterDate2{
@@ -203,12 +202,34 @@ h1{
   color: #fff;
   background-color: #3c8dbc;
 }
-.box {
+/* .box {
   position: relative;
   border-radius: 3px;
   margin-bottom: 50px;
   padding-bottom: 10px;
   box-shadow: 0 4px 4px rgb(0 0 0 / 14%);
+} */
+.box {
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  border-top: none;
+  margin-bottom: 20px;
+  border-top: 3px solid #d2d6de;
+  width: 100%;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  border-radius: 4px;
+}
+.small-box > .small-box-footer {
+  position: relative;
+  text-align: right;
+  padding: 7px 9px;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
   background-color: #337ab7
@@ -308,3 +329,44 @@ hr {
 .mat-checkbox {
   margin-left: 35px;  
 }
+.skin-black .sidebar-menu > li:hover > a, .skin-black .sidebar-menu > li.active > a, .skin-black .sidebar-menu > li.menu-open > a {
+  color: #fff;
+  background: #dd4b39;
+}
+.products-list .product-info {
+  margin-left: 10px;
+}
+@media (max-width: 767px){
+.main-sidebar {
+    padding-top: 105px;
+}}
+@media (min-width: 767px){
+  .main-sidebar {
+      padding-top: 80px;
+  }}
+
+
+  /****these class will be change from header.html during use of logo**/
+
+  @media (max-width: 767px){
+    .skin-black .main-header .logo {
+        background-color: #dd4b39;
+        color: #fff;
+        border-bottom: 0 solid transparent;
+        border-right: none;
+    }}
+    
+    @media (max-width: 767px){
+    .skin-black .main-header .logo:hover {
+        background-color: #dd4b39;
+    }}
+    
+    .text-light{
+      color:#dd4b39
+    }
+    
+    @media (max-width: 767px){
+      .text-light{
+          color: #fff;
+      }}
+      /****these class will be change from header.html during use of logo**/

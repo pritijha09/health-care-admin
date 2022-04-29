@@ -20,6 +20,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatChipInput, MatChipsModule} from '@angular/material/chips';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -54,6 +55,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatChipsModule,
     MatRadioModule,
     MatCardModule,
+    MatPaginatorModule
+    
     
     
    
@@ -89,7 +92,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatTabsModule,
     MatChipsModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule
     
     
    

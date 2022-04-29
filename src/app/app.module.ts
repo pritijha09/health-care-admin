@@ -1,3 +1,4 @@
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +25,15 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { RegisterComponent } from './layout/register/register.component';
 import {NgxPaginationModule} from 'ngx-pagination';;
+import {MatInputModule} from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LoaderInterceptor } from './_interceptor/loader.interceptor';
+import { HttpErrorInterceptor } from './_interceptor/http-error.interceptor';
+import { LoaderComponent } from './commonn/loader/loader.component';
+import { NgxSpinnerModule } from "ngx-spinner"; 
+import { HttpHeaderInterceptorService } from './_interceptor/http-header.interceptor';
+
 
 
 const APP_CONTAINERS = [
@@ -40,7 +50,8 @@ const APP_CONTAINERS = [
     DefaultLayoutComponent,
     LoginComponent,
     BreadcrumbComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoaderComponent,
   ],
   imports: [
     // NgModule,
@@ -49,8 +60,9 @@ const APP_CONTAINERS = [
     // NoopAnimationsModule,
     FormsModule,
     AppRoutingModule,
-    // NgxSpinnerModule,
     AdminModule,
+    NgxSpinnerModule,
+   // MainPipe,
     // InstituteModule,
     CommonnModule,
     HttpClientModule,
@@ -59,10 +71,26 @@ const APP_CONTAINERS = [
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
+    MatInputModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    
+
   ],
+  exports: [
+    MatInputModule, 
+    MatIconModule,
+    MatCheckboxModule,
+    MatButtonModule,
+  ],
+
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    {provide: HTTP_INTERCEPTORS, useClass: HttpHeaderInterceptorService, multi: true},
+  //  { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  //  { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
+  //  {provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

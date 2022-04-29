@@ -30,7 +30,7 @@ export class AuthenticationService {
     // const data = {email: userData.username.value , password: userData.password.value , mode: 'web', device_id : null};
     const data = {email: userData.email , password: userData.password, mode: 'web', device_id : null};
 
-    return this._http.post<any>(this.API_URL + '/login', data)
+    return this._http.post<any>(this.API_URL + 'admin/login', data)
       .pipe(map(user => {
         // login successful if there's a jwt token in the response
         // if (user && user.result.token) {
