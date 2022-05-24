@@ -47,7 +47,7 @@
                                     <th>H.O.D Name</th>
                                     <th>H.O.D Contact No.</th>
                                     <th>Address</th>
-
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,6 +61,15 @@
                                     <td>{{list.hod_name}}</td>
                                     <td>{{list.hod_contact}}</td>
                                     <td>{{list.address}}</td>
+                                    <td>
+                                        <a (click)="getPatientList(list.id)">
+                                          <button mat-icon-button color="primary" matTooltipPosition="above" matTooltip="view">
+                                            <mat-icon><span class="material-icons">
+                                              visibility
+                                              </span></mat-icon>
+                                          </button>
+                                        </a>
+                                        </td>
                                 </tr>
                                
                             </tbody>

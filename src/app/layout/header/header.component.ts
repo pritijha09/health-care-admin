@@ -77,6 +77,7 @@ export class HeaderComponent implements OnInit {
     };
     // Only adding route with non-empty label
     const newBreadcrumbs = breadcrumb.label ? [ ...breadcrumbs, breadcrumb ] : [ ...breadcrumbs];
+   // debugger
     if (route.firstChild) {
       //If we are not on our current path yet,
       //there will be more children to look after, to build our breadcumb

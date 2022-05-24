@@ -11,6 +11,8 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class CreateHubComponent implements OnInit {
 public addHubDetails: CreateHubModel = new CreateHubModel();
+public stateList: any[] = [];
+public districtList: any[] = [];
 public departmentList = [{id: '1', name: 'Radiology Department (X-ray)'},
 {id: '2', name: 'Operation Theatre Complex (OT)'},
 {id: '3', name: 'Medical Department'},
@@ -18,7 +20,26 @@ public departmentList = [{id: '1', name: 'Radiology Department (X-ray)'},
   constructor(private coreHttpService: CoreHttpService,  private SpinnerService: NgxSpinnerService,) { }
 
   ngOnInit(): void {
+    this.getStateList();
+  }
 
+  /** Method to get state list */
+  getStateList() {
+    this.coreHttpService.get('get-state-list').subscribe(response=> {
+        this.stateList = response.result;
+    },error=>{
+        console.log(error)
+    })
+  }
+
+  /** Method to get selected state */
+  getSelectedState(){
+      this.coreHttpService.post('get-district-list', {id: Number(this.addHubDetails.state_id)}).subscribe(response=> {
+        this.districtList = response.result;
+        //this.stateList = response.result;
+    },error=>{
+        console.log(error)
+    })
   }
 
   /** Method to get selected deplartment*/

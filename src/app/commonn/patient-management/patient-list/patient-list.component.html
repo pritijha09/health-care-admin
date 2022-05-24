@@ -1,0 +1,78 @@
+<section class="content">
+        <!-- <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+                <p style="color: white">Please Wait. </p>  
+                </ngx-spinner> -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-danger">
+                <div class="box-header with-border">
+                    <div class="col-md-6">
+                        <div class="has-feedback">
+                            <input type="text" class="form-control input-md margin" [(ngModel)]="searchText" name="search"
+                                placeholder="e.g. hospital name, location, patient name, patient id, dr. name">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <!-- <div class="btn-group pull-right margin">
+                        <button type="button" class="btn btn-default">copy</button>
+                        <button type="button" class="btn btn-default">csv</button>
+                        <button type="button" class="btn btn-default">print</button>
+                      </div> -->
+                    </div>
+                </div>
+                <!--/.box-header-->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table id="mytable" class="table table-bordred table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S.N</th>
+                                    <th>Patient ID</th>
+                                    <th>Patient Name</th>
+                                    <th>Mobile</th>
+                                    <th>Gender</th>
+                                    <th>Doctor Name</th>
+                                    <th>Type of Case</th>
+                                    <!-- <th>Address</th> -->
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr *ngFor="let list of patientList | grdFilter: searchText; let index=index;">
+                                    <td>{{index+1}}</td>
+                                    <td>{{list.patient_registration}}</td>
+                                    <td>{{list.name}}</td>
+                                    <td>{{list.mobile}}</td>
+                                    <td>{{list.gender}}</td>
+                                    <td>{{list.doctor_name}}</td>
+                                    <td>{{list.case_type_name}}</td>
+                                    <!-- <td>{{list.patient_address}}</td> -->
+                                    <td>
+                                      <a (click)="getPatientDetails(list.id)">
+                                        <button mat-icon-button color="primary" matTooltipPosition="above" matTooltip="view">
+                                          <mat-icon><span class="material-icons">
+                                            visibility
+                                            </span></mat-icon>
+                                        </button>
+                                      </a>
+                                      </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="clearfix">
+                            <mat-paginator [length]="50" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                            </mat-paginator>
+                        </div>
+                       
+                    </div>
+                </div>
+                <!--/table-->
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+

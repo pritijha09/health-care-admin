@@ -16,6 +16,9 @@ import { HomeComponent } from './home/home.component';
 import { CreateHubComponent } from './hub-management/create-hub/create-hub.component';
 import { ViewHubComponent } from './hub-management/view-hub/view-hub.component';
 import { GrdFilterPipe } from './_pipe/grd-filter.pipe';
+import { PatientListComponent } from './patient-management/patient-list/patient-list.component';
+import { PatientDetailsComponent } from './patient-management/patient-details/patient-details.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -27,7 +30,9 @@ import { GrdFilterPipe } from './_pipe/grd-filter.pipe';
     HomeComponent,
     CreateHubComponent,
     ViewHubComponent,
-    GrdFilterPipe
+    GrdFilterPipe,
+    PatientDetailsComponent,
+    PatientListComponent
   ],
   imports: [
     CommonnRoutingModule,
@@ -41,6 +46,7 @@ import { GrdFilterPipe } from './_pipe/grd-filter.pipe';
     ModalModule.forRoot(),
     DatepickerModule,
     MaterialDesignModule,
+    MatTabsModule,
     NgxDatatableModule,
     
  
